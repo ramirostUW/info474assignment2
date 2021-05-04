@@ -10,7 +10,7 @@ const App = () => {
     /* THIS GOES IN APP.JS */  
 
     const [cardData, cardLoading] = useFetch(
-        "To be Added"
+        "https://raw.githubusercontent.com/ramirostUW/info474assignment2/main/cards.csv"
     );
 
     const chartSize = 500;
@@ -19,13 +19,6 @@ const App = () => {
 
     _bins = bin().thresholds(30);
 
-
-    /*Object.keys(cardData).forEach(function(card){
-        if(!(cardData[card].atk === ""))
-        {
-            monsterData[card] = cardData[card];
-        }
-    });*/
     let monsterData = cardData.filter(card => !(card.atk === ""));
     let avgAtk = 0;
     monsterData.forEach(function(card){
@@ -134,7 +127,7 @@ const App = () => {
                 card:
             </p>
 
-            <img src="To be added" alt="image from rulebook" length="500" width = "800" /> 
+            <img src="https://raw.githubusercontent.com/ramirostUW/info474assignment2/main/rulebook_image.PNG" alt="image from rulebook" length="500" width = "800" /> 
 
             <p>For further elaboration, it's worth noting a few additional points:</p>
             <ul>
